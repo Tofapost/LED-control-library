@@ -29,10 +29,10 @@ const int led_red_outPin = 6;   //green led is connectd to this Pin
 
 void loop() {
 
-  int led_green_state = led_mode_f (led_on);
+  int led_green_state = led_set_mode_f (led_on);
   analogWrite(led_green_outPin, led_green_state);
 
-  int led_red_state = led_mode_f (led_blink);
+  int led_red_state = led_set_mode_f (led_blink);
   analogWrite(led_red_outPin, led_red_state);
 
 }
@@ -49,7 +49,7 @@ typedef enum {  //various modes that the led can be in
 
 
 //led mode function
-int led_mode_f(led_mode_t led_mode) { //name of the function and what is being passed in, in this case the led mode
+int led_set_mode_f(led_mode_t led_mode) { //name of the function and what is being passed in, in this case the led mode
   int led_state;
 
   // code to determin led state  
