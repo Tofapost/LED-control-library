@@ -8,13 +8,16 @@ It returns: led_state, the PWM value for that the LED pin should be set to at th
 
 You can set the LED to the following states
 
-led_off 
-led_on 
-led_blink 
-led_glow 
-led_fade_on 
+led_off
+led_on
+led_blink
+led_glow
+led_fade_on
 led_fade_off
 
-You can change the LED blink rate, glow rate, and fade on / off in the function code
+You can change the LED blink rate, glow rate, and fade on / off in the function code. 
+
+There is an example C++ file showing how the library might be used.
+These C++ files use non standard functions from Arduino. (millis, analogwrite) so you will need to include arduino.h or re-write the millis counter. 
 
 Enjoy
