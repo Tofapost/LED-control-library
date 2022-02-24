@@ -19,7 +19,6 @@ void loop() {
 
 //main loop example
 
-
   analogWrite(led_green_outPin, led_set_mode_f(led_on));
 
   analogWrite(led_red_outPin, led_set_mode_f(led_blink));

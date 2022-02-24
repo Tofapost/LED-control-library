@@ -12,6 +12,8 @@
 
 
 //led modes---------------------------------------------------
+/* these are declared in the .h file
+
 typedef enum {  //various modes that the led can be in
   led_off = 0,
   led_on,
@@ -21,6 +23,7 @@ typedef enum {  //various modes that the led can be in
   led_fade_off,
 } led_mode_t;
 
+*/
 
 //led mode function
 int led_state;
@@ -47,9 +50,6 @@ switch (led_mode) {
     break;
     case led_fade_off:
     led_state = get_fade_off_state_f();
-    break;
-  default:
-    led_state = 0;
     break;
 }
 
