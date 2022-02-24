@@ -12,18 +12,7 @@
 
 
 //led modes---------------------------------------------------
-/* these are declared in the .h file
-
-typedef enum {  //various modes that the led can be in
-  led_off = 0,
-  led_on,
-  led_blink,
-  led_glow,
-  led_fade_on,
-  led_fade_off,
-} led_mode_t;
-
-*/
+// See header file for led modes
 
 //led mode function
 int led_state;
@@ -60,7 +49,7 @@ return led_state;
 
 //blink timer function
 unsigned long blink_timer_millis; //last time blink changed on/off state
-int blink_interval = 750; // on/off time for indicator blink
+unsigned long blink_interval = 750; // on/off time for indicator blink
 int blink_state; //what will be retunred
 int get_blink_state_f(); { //name of the function and what is being passed in, in this case nothing (void)
 
@@ -85,7 +74,7 @@ unsigned long glow_timer_millis; //last time glow changed on/off state
 
 int glow_interval = 750; // on/off time for glow
 int glow_steps = 10; // number of steps in the glow
-int glow_step_millis = glow_interval / glow_steps; // the time between each step change
+unsigned long glow_step_millis = glow_interval / glow_steps; // the time between each step change
 int glow_step_brightness = 255 / glow_steps; // The change in brightness at each step
 bool glow_up = true; // glow direction up or down
 int glow_state; //what will be retunred
@@ -120,7 +109,7 @@ return glow_state;
 
 int fade_interval = 750; // on/off time for fade
 int fade_steps = 10; // number of steps in the fade
-int fade_step_millis = fade_interval / fade_steps; // the time between each step change
+unsigned long fade_step_millis = fade_interval / fade_steps; // the time between each step change
 int fade_step_brightness = 255 / fade_steps; // The change in brightness at each step
 
 unsigned long fade_on_timer_millis; //last time fade_on changed on/off state
